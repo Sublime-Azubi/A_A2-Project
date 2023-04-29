@@ -39,12 +39,13 @@ In project 1 version 2, we have created a simple web page that allows visitored 
 ```diff
 - _Creating “rootNode” subnodes: constructing “BackendServices” in “rootNode”: writing locks to lock-directories: reading path to AppData\Roaming\Docker\locked-directories: parsing JSON: invalid character "\x00". looking for the beginning of value_
 ```
-** SOLUTION:**<br>
+**SOLUTION**:<br>
  Located and deleted the locked directories file and when docker desktop started again, a new locked file was created.
  
 2. Terraform failure due to symantic and syntax error: we werer able to resolve this after several hours of concerted troubleshooting effort from teammates.
 3. The code was working but instead of redirecting to guestlist.php, it was redirecting to index.php. 
-** SOLUTION:**<br>
+
+**SOLUTION**:<br>
 After several attempts, it was noticed that there was just a small error in the login.php code so it was rewritten.
 The image on the right indicates the error message.
 4. Also the decralring multiple Attributes of the dynamodb in the teraform file caused the terraform plan to fail. the was reuired that the attributes be indexed first. <br>
@@ -63,15 +64,12 @@ The image on the right indicates the error message.
 * **Terraform** is an open-source infrastructure as code software tool that provides a consistent CLI workflow to manage hundreds of cloud services (resources). Terraform codifies cloud APIs into declarative configuration files.
 
 ### Basic Terraform Commands
-<html>
-<body>
- <p><p>terraform init  – initialize the plugin as per the code</p>
- <p>terraform fmt      – neatly formats the terraform code</p>
- <p>terraform plan     – highlights on the code to be implemented and whether the configurations are correct</p>
- <p>terraform apply    – applies/runs the code to create our resources</p>
- <p>terraform destroy  - to kill and remove all the code and infrastructure build. Totally remove the programs built by terraform.</p> 
-</body>
-</html>
+
+> <p><p>terraform init  – initialize the plugin as per the code</p>
+> <p>terraform fmt      – neatly formats the terraform code</p>
+> <p>terraform plan     – highlights on the code to be implemented and whether the configurations are correct</p>
+> <p>terraform apply    – applies/runs the code to create our resources</p>
+> <p>terraform destroy  - to kill and remove all the code and infrastructure build. Totally remove the programs built by terraform.</p> 
 
 ## LINK DYNAMODB
 Using AWS SDK and php-composer the dynamodb is linked to the application. the composer automatically populated the dynamodb table with user information from the web application  page
@@ -100,5 +98,10 @@ docker tag my-image username/my-repo. 
 docker tag docker-web-app:3.0 username/docker-web-app:3.0
 docker push username/my-repo.
 docker push username/docker-web-app:3.0
+
+## PULL IMAGE
+The application immage is available on dockerhun and can be puled with the command below:
+> docker pull chrisjanabi/docker-web-app
+
 
 
