@@ -43,7 +43,11 @@ In project 1 version 2, we have created a simple web page that allows visitored 
  Located and deleted the locked directories file and when docker desktop started again, a new locked file was created.
  
 2. Terraform failure due to symantic and syntax error: we werer able to resolve this after several hours of concerted troubleshooting effort from teammates.
-3. Also the decralring multiple Attributes of the dynamodb in the teraform file caused the terraform plan to fail. the was reuired that the attributes be indexed first. <br>
+3. The code was working but instead of redirecting to guestlist.php, it was redirecting to index.php. 
+** SOLUTION:**<br>
+After several attempts, it was noticed that there was just a small error in the login.php code so it was rewritten.
+The image on the right indicates the error message.
+4. Also the decralring multiple Attributes of the dynamodb in the teraform file caused the terraform plan to fail. the was reuired that the attributes be indexed first. <br>
 **SOLUTION**: Instead of indexing the intire list of attributes, Onely one attribute was declared. this is because dynamodb does not neccessarily require declaration of all table attribles during table creation. Atrributes can be addded on demand
 
 ## DEPLOYMENT OF DYNAMODB TABLE
