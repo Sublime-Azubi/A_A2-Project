@@ -34,12 +34,12 @@ In project 1 version 2, we have created a simple web page that allows visitored 
 - [x] Package and deploy project version 3  
 
 
-## CHALLENGES ACOUNTERED:
+## CHALLENGES ENCOUNTERED:
 1. **Docker Installer error:** <br>
 ```diff
 - _Creating “rootNode” subnodes: constructing “BackendServices” in “rootNode”: writing locks to lock-directories: reading path to AppData\Roaming\Docker\locked-directories: parsing JSON: invalid character "\x00". looking for the beginning of value_
 ```
-** SOLUION:**<br>
+** SOLUTION:**<br>
  Located and deleted the locked directories file and when docker desktop started again, a new locked file was created.
  
 2. Terraform failure due to symantic and syntax error: we werer able to resolve this after several hours of concerted troubleshooting effort from teammates.
