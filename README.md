@@ -17,17 +17,38 @@
 
 
 ## PROJECT OVERVIEW
-In project 1 version 2, we have created a simple web page that allows visitored to register and submit their information through a UI. In this project , we will create a dynamic webpage tthat will automatically populate a backend databae with the users informations.
+In project 1 version 2, we have created a simple web page that allows visitored to register and submit their information through a UI. In this project , we will create a dynamic webpage that will automatically populate a backend databae with the users informations. Terraform will be uses to automate the deployment of DynamoDB tables and would to dynamically populate a backend database with the users' log in information with the help of php-composer.
 
-We willbegin this project by revamping the UI of our web pagefrom V2 Project
+![Architecture](https://user-images.githubusercontent.com/104580680/235295691-9b1091e2-1236-4065-a836-753ab7051895.JPG)
+
+
+We will begin this project by revamping the UI of our web page from V2 Project. Thereafter, dockerize the  application and save the image in docker hub.
+
    
 ## TASK LIST
-- [x] Creaty Amazon DynamoDB for storage using aws console
-- [x] Link Dynamo to webpage using aws SDK and php-composer
 - [x] Automate Dynamodb deployment using Terraform
+- [x] Link Dynamo to webpage using aws SDK and php-composer
 - [x] Package and deploy project version 3  
 
 
 ## CHALLENGES ACOUNTERED:
-1. Terraform failure due to symantic and syntax error: we werer able to resolve this after several hours of concerted troubleshooting effort from teammates.
+1. **Docker Installer error:** <br>
+```diff
+- _Creating “rootNode” subnodes: constructing “BackendServices” in “rootNode”: writing locks to lock-directories: reading path to AppData\Roaming\Docker\locked-directories: parsing JSON: invalid character "\x00". looking for the beginning of value_
+```
+** SOLUION:**<br>
+ Located and deleted the locked directories file and when docker desktop started again, a new locked file was created.
+ 
+2. Terraform failure due to symantic and syntax error: we werer able to resolve this after several hours of concerted troubleshooting effort from teammates.
+3. Also the decralring multiple Attributes of the dynamodb in the teraform file caused the terraform plan to fail. the was reuired that the attributes be indexed first. <br>
+**SOLUTION**: Instead of indexing the intire list of attributes, Onely one attribute was declared. this is because dynamodb does not neccessarily require declaration of all table attribles during table creation. Atrributes can be addded on demand
+
+## DEPLOYMENT OF Dynamodb 
+
+
+
+## LINK DYNAMODB
+
+
+## PACKAGE AND DEPLOY APPLICATION
    
