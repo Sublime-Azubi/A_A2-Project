@@ -70,7 +70,7 @@ In project 1 version 2, we have created a simple web page that allows visitored 
 </html>
 
 ## LINK DYNAMODB
-Using AWS SDK and php-composer the dynamodb is linked to the application. the composer automatically populated the dynamodb table with uder information from the web application  page
+Using AWS SDK and php-composer the dynamodb is linked to the application. the composer automatically populated the dynamodb table with user information from the web application  page
 
 The **php-composer** is a dependency manager for PHP. It also has its own autoloader to enable autoloading.
 1. Download composer https://getcomposer.org
@@ -89,7 +89,7 @@ Require your first package.
 This involved dockerizing the entire application and shipping to a public repository. dockerhub is used in this case.
 First step is to write a docker file for the entire application and build  using the "docker build" command
 
-## 4 Simple steps to push  image to docker hub:
+### 4 Simple steps to push  image to docker hub:
 docker login --username username
 prompts for password. If you omit --password which is recommended as it does not store it in your command history.
 docker tag my-image username/my-repo. 
