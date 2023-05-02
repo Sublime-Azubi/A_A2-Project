@@ -101,7 +101,7 @@ docker push username/docker-web-app:3.0
 
 ## PULL IMAGE
 The application immage is available on dockerhun and can be puled with the command below:
-> docker pull chrisjanabi/docker-web-app
+> docker pull chrisjanabi/docker-web-app:3.0
 
 
 
